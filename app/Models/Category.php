@@ -11,6 +11,6 @@ class Category extends Model
 
     public function posts()
     {
-        return $this->hasMany('App\Posr');
+        return $this->hasMany('App\Models\Post');
     }
 }

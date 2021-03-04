@@ -4,7 +4,7 @@
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿詳細ページの説明文')
 @section('pageCss')
-<link href="/css/bbs/style.css" rel="stylesheet">
+<link href="/css/post/style.css" rel="stylesheet">
 @endsection
  
 @include('layouts.postheader')
@@ -14,12 +14,12 @@
     <div class="border p-4">
         <!-- 件名 -->
         <h1 class="h4 mb-4">
-            {{ $post->subject }}
+            {{ $post->sunject }}
         </h1>
  
         <!-- 投稿情報 -->
         <div class="summary">
-            <p><span>{{ $post->name }}</span> / <time>{{ $post->updated_at->format('Y.m.d H:i') }}</time> / {{ $post->category->name }} / {{ $post->id }}</p>
+            <p><span>{{ $post->name }}</span> / <time>{{ $post->updated_at->format('Y.m.d H:i') }}</time> / {{ optional($post->category)->name }} / {{ $post->id }}</p>
         </div>
  
         <!-- 本文 -->

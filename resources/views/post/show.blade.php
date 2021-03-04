@@ -47,6 +47,11 @@
                 <p>コメントはまだありません。</p>
             @endforelse
         </section>
+        <div class="mt-4 mb-4">
+          <a href="{{ route('post.index') }}" class="btn btn-info">
+              一覧に戻る
+          </a>
+        </div>
     </div>
 </div>
 @endsection

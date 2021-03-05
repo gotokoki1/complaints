@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/comment', 'CommentsController', ['only' => ['store']]);
+Route::resource('/post', 'PostController', ['only' => ['index', 'show', 'create', 'store']]);
+

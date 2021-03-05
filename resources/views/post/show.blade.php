@@ -16,6 +16,16 @@
       <a href="{{ action('PostController@edit', $post->id) }}" class="btn btn-info">
         編集する
         </a>
+        <form
+          style="display: inline-block;"
+          method="POST"
+          action="{{ action('PostController@destroy', $post->id) }}"
+        >
+          @csrf
+          @method('DELETE')
+          <button class="btn btn-danger">削除する</button>
+        </form>
+      </div>
     </div>
     <!-- 件名 -->
     <h1 class="h4 mb-4">

@@ -22,7 +22,7 @@
             <fieldset class="mb-4">
  
                 <div class="form-group">
-                    <label for="subject">
+                    <label for="sunject">
                         名前
                     </label>
                     <input
@@ -40,7 +40,7 @@
                 </div>
  
                 <div class="form-group">
-                    <label for="subject">
+                    <label for="sunject">
                         カテゴリー
                     </label>
                     <input

@@ -51,7 +51,7 @@
                 </td>
                 <td class="text-nowrap">
                     <p><a href="{{ action('PostController@show', $post->id) }}" class="btn btn-primary btn-sm">詳細</a></p>
-                    <p><a href="" class="btn btn-info btn-sm">編集</a></p>
+                    <p><a href="{{ action('PostController@edit', $post->id) }}" class="btn btn-info btn-sm">編集</a></p>
                     <p><a href="" class="btn btn-danger btn-sm">削除</a></p>
                 </td>
             </tr>

@@ -4,7 +4,7 @@
 @section('keywords', 'キーワード1,キーワード2,キーワード3')
 @section('description', '投稿詳細ページの説明文')
 @section('pageCss')
-<link href="/css/bbs/style.css" rel="stylesheet">
+<link href="/css/post/style.css" rel="stylesheet">
 @endsection
  
 @include('layouts.postheader')
@@ -12,6 +12,11 @@
 @section('content')
 <div class="container mt-4">
     <div class="border p-4">
+      <div class="mb-4 text-right">
+        <a href="{{ action('PostController@edit', $post->id) }}" class="btn btn-info">
+        編集する
+        </a>
+      </div>
         <!-- 件名 -->
         <h1 class="h4 mb-4">
             {{ $post->subject }}

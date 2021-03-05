@@ -40,10 +40,10 @@
         @foreach ($posts as $post)
             <tr>
                 <td>{{ $post->id }}</td>
-                <td>{{ $post->category->name }}</td>
+                <td>{{ optional($post->category)->name }}</td>
                 <td>{{ $post->created_at->format('Y.m.d') }}</td>
                 <td>{{ $post->name }}</td>
-                <td>{{ $post->subject }}</td>
+                <td>{{ $post->sunject }}</td>
                 <td>{!! nl2br(e(Str::limit($post->message, 100))) !!}
                 @if ($post->comments->count() >= 1)
                     <p><span class="badge badge-primary">コメント：{{ $post->comments->count() }}件</span></p>

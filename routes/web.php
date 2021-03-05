@@ -21,6 +21,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/post', 'PostController', ['only' => ['index', 'show', 'create', 'store', 'edit', 'update']]);
 Route::resource('/comment', 'CommentsController', ['only' => ['store']]);
-Route::resource('/post', 'PostController', ['only' => ['index', 'show', 'create', 'store']]);
-

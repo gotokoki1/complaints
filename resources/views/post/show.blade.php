@@ -25,7 +25,6 @@
           @method('DELETE')
           <button class="btn btn-danger">削除する</button>
         </form>
-      </div>
     </div>
     <!-- 件名 -->
     <h1 class="h4 mb-4">

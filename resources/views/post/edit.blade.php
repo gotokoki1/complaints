@@ -40,13 +40,21 @@
           <label for="sunject">
             カテゴリー
           </label>
-          <input
+          <select 
             id="category_id"
             name="category_id"
             class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
-            value="{{ old('category_id') ?: $post->category_id }}"
-            type="text"
           >
+            @foreach($categories as $id => $name)
+              <option value="{{ $id }}" 
+                @if ($post->category_id == $id) 
+                  selected
+                @endif
+              >
+                {{ $name }}
+              </option>
+              @endforeach
+          </select>
           @if ($errors->has('category_id'))
             <div class="invalid-feedback">
               {{ $errors->first('category_id') }}

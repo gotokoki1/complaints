@@ -26,7 +26,10 @@ class PostController extends Controller
 
     public function create()
     {
-        return view('post.create');
+        $category = new Category;
+        $categories = $category->getLists()->prepend('夫・彼氏の良い所', '妻・彼女の良い所', '夫・彼氏への不満', '妻・彼女への不満', 'その他');
+
+        return view('post.create', ['categories' => $categories]);
     }
 
     public function store(PostRequest $request)
@@ -46,8 +49,11 @@ class PostController extends Controller
 
     public function edit($post_id)
     {
+        $category = new Category;
+        $categories = $category->getLists();
+
         $post = Post::findOrFail($post_id);
-        return view('post.edit', ['post' => $post]);
+        return view('post.edit', ['post' => $post, 'categories' => $categories]);
     }
 
     public function update(PostRequest $request)

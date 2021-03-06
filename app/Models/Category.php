@@ -9,8 +9,15 @@ class Category extends Model
 {
     use HasFactory;
 
-    public function posts()
+    public function post()
     {
         return $this->hasMany('App\Posr');
+    }
+
+    public function getLists()
+    {
+        $categories = Category::orderBy('id', 'asc')->pluck('name', 'id');
+
+        return $categories;
     }
 }

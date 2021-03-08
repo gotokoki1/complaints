@@ -49,9 +49,9 @@
                         class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}"
                         value="{{ old('category_id') }}"
                     >
-                    @foreach($categories as $id => $name)
-                      <option value="{{ $id }}">{{ $name }}</option>
-                    @endforeach
+                      @foreach($categories as $id => $name)
+                        <option value="{{ $id }}">{{ $name }}</option>
+                      @endforeach
                     </select>
                     @if ($errors->has('category_id'))
                         <div class="invalid-feedback">

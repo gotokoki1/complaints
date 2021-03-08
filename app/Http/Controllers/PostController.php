@@ -27,8 +27,7 @@ class PostController extends Controller
 
     public function create()
     {
-        $category = new Category;
-        $categories = $category->getLists()->prepend('夫・彼氏の良い所', '妻・彼女の良い所', '夫・彼氏への不満', '妻・彼女への不満', 'その他');
+        $categories = config('category.categories');
 
         return view('post.create', ['categories' => $categories]);
     }
@@ -50,8 +49,7 @@ class PostController extends Controller
 
     public function edit($post_id)
     {
-        $category = new Category;
-        $categories = $category->getLists();
+        $categories = config('category.categories');
 
         $post = Post::findOrFail($post_id);
         return view('post.edit', ['post' => $post, 'categories' => $categories]);
@@ -81,3 +79,4 @@ class PostController extends Controller
         return redirect('post')->with('poststatus', '投稿を削除しました');
     }
 }
+// '妻・彼女の良い所', '夫・彼氏への不満', '妻・彼女への不満', 'その他'

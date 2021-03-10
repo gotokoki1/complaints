@@ -25,4 +25,8 @@ class Post extends Model
     {
         return $this->belongsTo('App\Models\Category');
     }
+
+    public function getCategoryNameAttribute() {
+        return config('category.categories.' .$this->category_id);
+    }
 }

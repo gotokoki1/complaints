@@ -12,8 +12,19 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+        // $categories = config('category.categories');
+
+        // if (!is_null($category_id)) {
+        //     $posts = Post::where('category_id', $category_id)->orderBy('created_at', 'desc')->paginate(10);
+        // } else {
+        //     $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+        // }
+        
+ 
         return view('post.index', [
-            'posts' => $posts
+            'posts' => $posts,
+            // 'categories' => $categories,
+            // 'category_id' => $category_id
             ]);
     }
 
@@ -78,5 +89,8 @@ class PostController extends Controller
 
         return redirect('post')->with('poststatus', '投稿を削除しました');
     }
+
+    // public function getCategory() {
+    //     return config('category.categories.' .$this->category.categories_id);
+    // }
 }
-// '妻・彼女の良い所', '夫・彼氏への不満', '妻・彼女への不満', 'その他'

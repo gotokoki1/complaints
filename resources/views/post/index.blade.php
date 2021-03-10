@@ -40,7 +40,7 @@
         @foreach ($posts as $post)
             <tr>
                 <td>{{ $post->id }}</td>
-                <td>{{ optional($post->category)->name }}</td>
+                <td>{{ $post->categoryName }}</td>
                 <td>{{ $post->created_at->format('Y.m.d') }}</td>
                 <td>{{ $post->name }}</td>
                 <td>{{ $post->sunject }}</td>
@@ -61,13 +61,15 @@
                     </p>
                 </td>
             </tr>
-            <div class="d-flex justify-content-center mb-5">
+            <!-- <div class="d-flex justify-content-center mb-5">
                 {{ $posts->links() }}
-            </div>
+            </div> -->
         @endforeach
         </tbody>
     </table>
 </div>
+<div class="d-flex justify-content-center mb-5">
+    {{ $posts->links() }}
+</div>
 @endsection
- 
 @include('layouts.postfooter')

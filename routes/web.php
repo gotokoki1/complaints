@@ -15,11 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('post.index');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\PostController::class, 'index'])->name('post.index');
 Route::resource('/post', 'PostController', ['only' => ['index', 'show', 'create', 'store', 'edit', 'update', 'destroy']]);
 Route::resource('/comment', 'CommentsController', ['only' => ['store']]);

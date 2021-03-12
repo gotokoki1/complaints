@@ -61,9 +61,6 @@
                     </p>
                 </td>
             </tr>
-            <!-- <div class="d-flex justify-content-center mb-5">
-                {{ $posts->links() }}
-            </div> -->
         @endforeach
         </tbody>
     </table>

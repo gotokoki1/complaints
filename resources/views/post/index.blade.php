@@ -26,20 +26,18 @@
 <div class="table-responsive">
     <table class="table table-hover">
         <thead>
-        <tr>
-            <th>ID</th>
+          <tr>
             <th>カテゴリ</th>
             <th>作成日時</th>
             <th>名前</th>
             <th>件名</th>
             <th>メッセージ</th>
             <th>処理</th>
-        </tr>
+          </tr>
         </thead>
         <tbody id="tbl">
         @foreach ($posts as $post)
             <tr>
-                <td>{{ $post->id }}</td>
                 <td>{{ $post->categoryName }}</td>
                 <td>{{ $post->created_at->format('Y.m.d') }}</td>
                 <td>{{ $post->name }}</td>

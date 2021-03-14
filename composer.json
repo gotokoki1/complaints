@@ -22,7 +22,8 @@
         "laravel/ui": "^3.2",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3.3",
+        "heroku/heroku-buildpack-php": "*"
     },
     "config": {
         "optimize-autoloader": true,
@@ -58,9 +59,6 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ],
-        "compile": [
-            "@php -r \"file_exists('.env') || copy('.env.heroku', '.env');\""
         ]
     }
 }

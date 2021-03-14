@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 public/
+web: https://complaints999.herokuapp.com/

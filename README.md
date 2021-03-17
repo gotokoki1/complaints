@@ -18,9 +18,10 @@ laravel,mysql
 投稿して、男女の気持ちを理解できようにするために制作しました。
 
 # DEMO
-![25c0b2e00ca0f3bb70dbbaafe2d3cdc3](https://gyazo.com/a8912aa2b9d6491ae656c480c622cc2b)
+![5d77d9b29c4c0020778f8add05c4ad88](https://user-images.githubusercontent.com/72792963/111414813-0658fe00-8724-11eb-8018-53916db2da9d.gif)
 
-#今後追加していきたい機能
+　
+# 今後追加していきたい機能
 ・いいね機能
 ・フォロー機能
 

@@ -1,3 +1,63 @@
+# アプリ名
+couplecomplaints
+
+# アプリURL
+http://couplecomplaints.herokuapp.com/
+
+# 概要
+夫婦・カップル間での問題点などを投稿して、解決してもらう掲示板です
+
+# デプロイ先
+Heroku
+
+# 開発環境
+laravel,mysql
+
+# 制作背景
+男女間で考え方が違い、喧嘩になる際何が原因で怒っているの分からないという話を良く聞くので、
+投稿して、男女の気持ちを理解できようにするために制作しました。
+
+# DEMO
+![25c0b2e00ca0f3bb70dbbaafe2d3cdc3](https://gyazo.com/a8912aa2b9d6491ae656c480c622cc2b)
+
+#今後追加していきたい機能
+・いいね機能
+・フォロー機能
+
+# テーブル設計
+
+## user テーブル
+
+| Column   | Type   |
+| -------- | ------ |
+| name     | string |
+| email    | string |
+| password | string |
+
+## post テーブル
+
+| Column      | Type
+| ----------- | ------- |
+| category_id | integer |
+| sunject     | string  |
+| message     | text    |
+| name        | string  |
+
+## category テーブル
+
+| Column | Type   |
+| ------ | ------ |
+| name   | string |
+
+## commentテーブル
+
+| Column  | Type    |
+| ------- | ------- |
+| post_id | integer |
+| name    | string  |
+| comment | text    |
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
